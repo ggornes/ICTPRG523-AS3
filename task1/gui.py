@@ -1,7 +1,7 @@
 import tkinter as tk
 import time
 
-from ..models.color import Color, RGB, complement
+from color import Color, RGB, complement
 
 color_list = [
     Color("Air Force Blue", RGB(93, 138, 168)),
