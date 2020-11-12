@@ -23,7 +23,6 @@ def server_program():
     port = 5678  # initiate port no above 1024
 
     server_socket = socket.socket()  # get instance
-    # look closely. The bind() function takes tuple as argument
     server_socket.bind((host, port))  # bind host address and port together
 
     # configure how many client the server can listen simultaneously
@@ -39,7 +38,7 @@ def server_program():
             # if data is not received break
             break
         if data[-1] != '?':
-            response = "Please ask properly"
+            response = "Please ask properly (hint: add a '?')"
             conn.send(response.encode())
         else:
             print("from connected user: " + str(data))
